@@ -1,0 +1,6 @@
+@houlala_suggestion_HostAddress = http://localhost:5177
+
+GET {{houlala_suggestion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
