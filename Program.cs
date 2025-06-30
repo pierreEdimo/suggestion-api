@@ -1,5 +1,4 @@
 using houlala_suggestion;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,7 +44,5 @@ app.MapGet("/api/suggestions", ([AsParameters] Filter filter, ISuggestionReposit
 
     return Results.Ok(suggestionResult);
 }); 
-
-app.MapGet("/suggestions", () => { return "Hello World"; }).WithName("GetSuggestions");
 
 app.Run();

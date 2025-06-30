@@ -52,9 +52,4 @@ public class SuggestionRepository(SuggestionDbContext dbContext) : ISuggestionRe
     {
         throw new NotImplementedException();
     }
-
-    public Task<ActionResult<List<Suggestion>>> GetSuggestionsByUserId(string userId)
-    {
-        throw new NotImplementedException();
-    }
 }

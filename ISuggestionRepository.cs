@@ -9,6 +9,4 @@ public interface ISuggestionRepository
     Task<ActionResult<List<string>>> GetSuggestionsBasedOnSearchTerm(Filter filter);
 
     Task<ActionResult<List<Suggestion>>> GetTopSuggestions();
-
-    Task<ActionResult<List<Suggestion>>> GetSuggestionsByUserId(string userId);
 }
