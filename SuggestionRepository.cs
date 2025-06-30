@@ -28,6 +28,11 @@ public class SuggestionRepository(SuggestionDbContext dbContext) : ISuggestionRe
             queryable = queryable.Where(s => s.Word!.Contains(filter.Term)); 
         }
 
+        if (!string.IsNullOrWhiteSpace(filter.SearchCategory))
+        {
+            queryable = queryable.Where(s => s.SearchCategory == filter.SearchCategory);
+        }
+
         if (!string.IsNullOrWhiteSpace(filter.SortBy))
         {
             if (typeof(Suggestion).GetProperty(filter.SortBy) != null)

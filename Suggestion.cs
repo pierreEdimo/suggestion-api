@@ -7,4 +7,5 @@ public class Suggestion
     [Key] public int Id { get; set; }
     public string? UserId { get; set; }
     public string? Word { get; set; }
+    public string? SearchCategory { get; set; }
 }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using houlala_suggestion;
 
@@ -10,9 +11,11 @@ using houlala_suggestion;
 namespace houlala_suggestion.Migrations
 {
     [DbContext(typeof(SuggestionDbContext))]
-    partial class SuggestionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250630180912_searchCategory")]
+    partial class searchCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

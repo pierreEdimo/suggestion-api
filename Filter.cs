@@ -4,6 +4,7 @@ public class Filter
 {
     public string? UserId { get; set; }
     public string? Term { get; set; }
+    public string? SearchCategory { get; set; }
     public string? SortBy { get; set; } = "Word";
     private string _sortOrder = "asc";
 
