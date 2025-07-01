@@ -1,4 +1,5 @@
 using houlala_suggestion;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +26,7 @@ if (app.Environment.IsDevelopment()) app.MapOpenApi();
 
 app.UseHttpsRedirection();
 
-app.MapPost("/api/suggestions", (ISuggestionRepository suggestionRepository, Suggestion suggestion) =>
+app.MapPost("/api/suggestions", (ISuggestionRepository suggestionRepository,[FromBody] Suggestion suggestion) =>
 {
     var createdSuggestion =  suggestionRepository.SaveWord(suggestion).Result.Value;
 
